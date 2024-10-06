@@ -1,0 +1,13 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        IDevice tv = new TV();
+        RemoteControl tvRemote = new AdvancedRemoteControl(tv);
+
+        tvRemote.PowerOn();
+        tvRemote.SetVolume(50);
+        ((AdvancedRemoteControl)tvRemote).Mute();
+        tvRemote.PowerOff();
+    }
+}
